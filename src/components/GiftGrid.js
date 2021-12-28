@@ -4,24 +4,19 @@ import { useFetchGifs } from '../hooks/useFetchGifs'
 import { GifGridItem } from './GifGridItem'
 
 export const GiftGrid = ({ category }) => {
-    // const [images, setImages] = useState([])
 
-    const {data, loading} = useFetchGifs(category);
-    console.log(data,loading)
-    // useEffect(() => {
-    //     getGifts(category).then( imgs => setImages(imgs))
-    // }, [category]) // solo se ejecuta una vez
+    const {data:images, loading} = useFetchGifs(category);
+    console.log(images,loading)
 
-
-
-    // getGifts()
     return (
         <>
             <h3> {category}</h3>
+            {loading && <p>Loading....</p>}
+
             <div className='card-grid'>
 
                 {
-                    data.map((img) =>
+                    images.map((img) =>
                         <GifGridItem
                             key={img.id}
                             {...img}
