@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { GifGridItem } from './GifGridItem'
 
 export const GiftGrid = ({ category }) => {
     const [images, setImages] = useState([])
@@ -7,8 +8,10 @@ export const GiftGrid = ({ category }) => {
         getGifts()
     }, []) // solo se ejecuta una vez
 
-    const getGifts = async() => {
-        const url = "https://api.giphy.com/v1/gifs/search?q=Rick+and+Morty&limit=5&api_key=cHrzYubYZ4nTPGmAmQrGm1aDRtL1Vlr5"
+    const getGifts = async () => {
+        const trimCategory = category.replace(/\s/g, '+')
+        const url = `https://api.giphy.com/v1/gifs/search?q=${trimCategory}&limit=5&api_key=cHrzYubYZ4nTPGmAmQrGm1aDRtL1Vlr5`
+        console.log(url)
         const resp = await fetch(url);
         const { data } = await resp.json();
         const gifs = data.map(img => {
@@ -21,17 +24,22 @@ export const GiftGrid = ({ category }) => {
         console.log(gifs)
         setImages(gifs)
     }
+
     // getGifts()
     return (
         <div>
             <h3> {category}</h3>
-            <ol>
+
                 {
-                    images.map((image) =>
-                        <li key={image.id}> {image.title}</li>)
+                images.map((img) =>
+                    <GifGridItem
+                        key={img.id}
+                        {...img}
+                    />
+                    )
                 }
 
-            </ol>
+
 
         </div>
     )
