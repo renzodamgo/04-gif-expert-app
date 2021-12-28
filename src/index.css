@@ -12,3 +12,31 @@ input{
   width: 100%;
   font-size: 1.2rem;
 }
+
+.card{
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* text-align: center; */
+  align-content: center;
+  border: 1px solid gray;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 6px;
+  margin-right: 6px;
+}
+
+.card img{
+  max-height: 200px;
+}
+
+.card p {
+  padding: 5px;
+  text-align: center;
+}
+
+.card-grid{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
