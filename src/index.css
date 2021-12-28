@@ -5,3 +5,10 @@
 body{
   padding: 60px;
 }
+
+input{
+  padding: 10px;
+  color: gray;
+  width: 100%;
+  font-size: 1.2rem;
+}
