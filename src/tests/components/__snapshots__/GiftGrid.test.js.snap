@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pruebas en el GiftGrid debe mostraste correctamente 1`] = `
+<Fragment>
+  <h3
+    className="animate__animated animate__fadeIn"
+  >
+     
+    Digimon
+  </h3>
+  <p>
+    Loading....
+  </p>
+  <div
+    className="card-grid"
+  />
+</Fragment>
+`;

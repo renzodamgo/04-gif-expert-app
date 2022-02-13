@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas den GifExpertApp Debería hacer match con el snapshot 1`] = `
+<div>
+  <h2>
+    GifExpertApp
+  </h2>
+  <AddCategory
+    setCategories={[Function]}
+  />
+  <hr />
+  <ol />
+</div>
+`;
+
+exports[`Pruebas den GifExpertApp Debería mostarse un arreeglo de categorías 1`] = `
+<div>
+  <h2>
+    GifExpertApp
+  </h2>
+  <AddCategory
+    setCategories={[Function]}
+  />
+  <hr />
+  <ol>
+    <GiftGrid
+      category="One Punch Man"
+      key="One Punch Man"
+    />
+    <GiftGrid
+      category="Dragon Ball"
+      key="Dragon Ball"
+    />
+  </ol>
+</div>
+`;

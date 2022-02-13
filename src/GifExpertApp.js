@@ -2,9 +2,9 @@ import { useState } from "react"
 import { AddCategory } from "./components/AddCategory"
 import { GiftGrid } from "./components/GiftGrid"
 
-export const GifExpertApp = () => {
+export const GifExpertApp = ({defaultCategories = []}) => {
     // const categories = ['One punch man','Naruto','Dragon Ball']
-    const [categories, setCategories] = useState(['One punch man'])
+    const [categories, setCategories] = useState(defaultCategories)
 
     // const handleAdd = () => {
     //     // setCategories([...categories, 'Digimon'])

@@ -4,7 +4,13 @@ exports[`Pruebas en <Add Category>/ Debe mostrarse correctamente 1`] = `
 <form
   onSubmit={[Function]}
 >
-  <p />
+  <p
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  />
   <input
     onChange={[Function]}
     placeholder="Ingresa tu búsqueda"

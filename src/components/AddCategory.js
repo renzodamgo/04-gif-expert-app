@@ -19,7 +19,7 @@ export const AddCategory = ({setCategories}) => {
     }
     return (
         <form onSubmit={handleSubmit}>
-            <p>{ inputValue}</p>
+            <p style={{display:'none'}}>{ inputValue}</p>
 
             <input
                 type="text"
